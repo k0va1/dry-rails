@@ -7,6 +7,9 @@ module Dry
       #
       # @api public
       module ControllerHelpers
+        def initialize(*args, **kwargs, &block)
+          super()
+        end
         # Return a component from the application container
         #
         # @example

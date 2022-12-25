@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class ApiUsersController < ActionController::API
+  include Dummy::Deps[
+    mailer: "mailer"
+  ]
+
   schema(:show) do
     required(:id).value(:integer)
   end
